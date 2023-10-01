@@ -198,6 +198,11 @@
 
 
 
+
+//3 ДОМАШНЯЯ РАБОТА
+
+//1 задача
+
 // Внутри класса Answer напишите метод IsPalindrome, который принимает на вход пятизначное число number и проверяет, является ли оно палиндромом.
 // Метод должен проверить является ли число пятизначным, в противном случае - вывести Число не пятизначное и False в следующей строке.
 // Для остальных чисел вернуть True или False.
@@ -238,11 +243,39 @@
 //     Console.WriteLine("False");
 // }
 
-Внутри класса Answer напишите метод DistanceBetweenPoints, который принимает на вход координаты двух точек pointA и pointB в виде массива целых чисел, и возвращает расстояние между ними в 3D пространстве.
+// ПРОГРАММА РАБОТАЕТ, НО НЕ В ТОМ КОМПИЛЯТОРЕ, КОТОРЫЙ ПРЕДЛАГАЕТСЯ НА САЙТЕ
 
 
-A (3,6,8); B (2,1,-7) -> 15.84
-A (7,-5, 0); B (1,-1,9) -> 11.53
+//2 задача
+
+// Внутри класса Answer напишите метод DistanceBetweenPoints, который принимает на вход координаты двух точек pointA и pointB в виде массива целых чисел, и возвращает расстояние между ними в 3D пространстве.
+
+
+// A (3,6,8); B (2,1,-7) -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+void PrintDist(int Ax, int Ay, int Az, int Bx, int By, int Bz)
+{
+    double distance = sqrt((Ax - Bx) * (Ax - Bx) + (Ay - By) * (Ay - By) + (Az - Bz)(Az - Bz));
+    Console.WriteLine($"Distance between boints A and B is {distance}");
+}
+
+Console.WriteLine("Enter three coordinates point A: ");
+A1 = Convert.ToInt32(Console.ReadLine());
+A2 = Convert.ToInt32(Console.ReadLine());
+A3 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter three coordinates point B: ");
+B1 = Convert.ToInt32(Console.ReadLine());
+B2 = Convert.ToInt32(Console.ReadLine());
+B3 = Convert.ToInt32(Console.ReadLine());
+
+PrintDist(A1, A2, A3, B1, B2, B3);
+
+
+
+
 
 
 
