@@ -255,45 +255,65 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
-void PrintDist(int Ax, int Ay, int Az, int Bx, int By, int Bz)
-{
-    double distance = sqrt((Ax - Bx) * (Ax - Bx) + (Ay - By) * (Ay - By) + (Az - Bz)(Az - Bz));
-    Console.WriteLine($"Distance between boints A and B is {distance}");
-}
+// void PrintDist(int Ax, int Ay, int Az, int Bx, int By, int Bz)
+// {
+//     int x=(Ax-Bx)*(Ax-Bx);
+//     int y=(Ay-By)*(Ay-By);
+//     int z=(Az-Bz)*(Az-Bz);
 
-Console.WriteLine("Enter three coordinates point A: ");
-A1 = Convert.ToInt32(Console.ReadLine());
-A2 = Convert.ToInt32(Console.ReadLine());
-A3 = Convert.ToInt32(Console.ReadLine());
+//     double distance = Math.Sqrt(x + y + z);
+//     Console.WriteLine($"Distance between boints A and B is {distance}");
+// }
 
-Console.WriteLine("Enter three coordinates point B: ");
-B1 = Convert.ToInt32(Console.ReadLine());
-B2 = Convert.ToInt32(Console.ReadLine());
-B3 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter three coordinates point A: ");
+// int A1 = Convert.ToInt32(Console.ReadLine());
+// int A2 = Convert.ToInt32(Console.ReadLine());
+// int A3 = Convert.ToInt32(Console.ReadLine());
 
-PrintDist(A1, A2, A3, B1, B2, B3);
+// Console.WriteLine("Enter three coordinates point B: ");
+// int B1 = Convert.ToInt32(Console.ReadLine());
+// int B2 = Convert.ToInt32(Console.ReadLine());
+// int B3 = Convert.ToInt32(Console.ReadLine());
 
+// PrintDist(A1, A2, A3, B1, B2, B3);
 
-
-
-
-
-
-Внутри класса Answer напишите метод ShowCube, который принимает на вход число (N) и выводит таблицу кубов чисел от 1 до N (включительно) каждое на новой строке.
+// ПРОГРАММА РАБОТАЕТ, НО НЕ В ТОМ КОМПИЛЯТОРЕ, КОТОРЫЙ НА САЙТЕ
 
 
-N = 3 
-/*
-1
-8
-27
-*/
+// 3 задача
 
-N = 5
-/*
-1
-8
-27
-64
-125
-*/
+// Внутри класса Answer напишите метод ShowCube, который принимает на вход число (N) и выводит таблицу кубов чисел от 1 до N (включительно) каждое на новой строке.
+
+
+// N = 3 
+// /*
+// 1
+// 8
+// 27
+// */
+
+// N = 5
+// /*
+// 1
+// 8
+// 27
+// 64
+// 125
+// */
+
+// void ShowCube(int num)
+// {
+//     for(int i=0; i<=num; i++)
+//     {
+//         int cube = i*i*i;
+//         Console.WriteLine(cube);
+//     } 
+// }
+
+// Console.WriteLine("Enter the number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// Console.WriteLine("cubes of numbers from 1 to N: ");
+// ShowCube(number);
+
+// ПРОГРАММА РАБОТАЕТ, НО НЕ В ТОМ КОМПИЛЯТОРЕ, КОТОРЫЙ НА САЙТЕ
