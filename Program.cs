@@ -317,3 +317,74 @@
 // ShowCube(number);
 
 // ПРОГРАММА РАБОТАЕТ, НО НЕ В ТОМ КОМПИЛЯТОРЕ, КОТОРЫЙ НА САЙТЕ
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+
+// void ADegreeB(int numA, int numB)
+// {
+//     int degree = 1;
+//     for(int i=1; i<=numB; i++)
+//     {
+//         degree = degree*numA;
+//     }
+//     Console.WriteLine($"number A degree of number B is {degree}");
+// }
+
+// Console.WriteLine("Enter number A and number B: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// int b = Convert.ToInt32(Console.ReadLine());
+
+// ADegreeB(a, b);
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+
+// void SumDigit(int number)
+// {
+//     int rem = 0;
+//     while(number>0)
+//     {
+//         rem = rem + (number%10);
+//         number = number/10;
+//     }
+//     Console.WriteLine($"Sum of digits in a number is {rem}");
+// }
+
+// Console.WriteLine("Enter a number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// SumDigit(num);
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+// int [] CreateRandomArray(int size){
+//     int [] array = new int [size];
+//     for (int i = 0; i<size; i++){
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array){
+//     Console.Write("[");
+//     for(int i = 0; i<array.Length-1; i++){
+//         Console.Write($"{array[i]}, ");
+//     }
+//     Console.Write(array[array.Length-1]);
+//     Console.WriteLine("]");
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Enter size of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Enter elements of array:");
+
+// int[] newArray = CreateRandomArray(size);
+// ShowArray(newArray);
