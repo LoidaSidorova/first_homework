@@ -416,44 +416,139 @@
 // [345, 897, 568, 234] -> 2
 
 
-int [] CreateRandomArray(int min, int max, int size){
-    int [] array = new int [size];
-    for (int i = 0; i<size; i++){
-        array[i] = new Random().Next(min,max+1);
-    }
-    return array;
-}
+// int [] CreateRandomArray(int min, int max, int size){
+//     int [] array = new int [size];
+//     for (int i = 0; i<size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
 
-void ShowArray(int[] array){
-    for(int i = 0; i<array.Length; i++){
-        Console.Write($"{array[i]} ");
-    }
-    Console.WriteLine();
-}
+// void ShowArray(int[] array){
+//     for(int i = 0; i<array.Length; i++){
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
 
-void Evens(int[] array){
-    int count = 0;
-    for(int i=0; i<array.Length; i++){
-        if(array[i]%2==0) count++;
-    }
-    Console.WriteLine($"number of even numbers is {count}");
-}
+// void Evens(int[] array){
+//     int count = 0;
+//     for(int i=0; i<array.Length; i++){
+//         if(array[i]%2==0) count++;
+//     }
+//     Console.WriteLine($"number of even numbers is {count}");
+// }
 
-Console.WriteLine("Enter min of array val:");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter max of array val:");
-int max = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter size of array:");
-int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min of array val:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max of array val:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter size of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
 
-int[] newArray = CreateRandomArray(min,max,size);
-ShowArray(newArray);
-Evens(newArray);
+// int[] newArray = CreateRandomArray(min,max,size);
+// ShowArray(newArray);
+// Evens(newArray);
 
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
+
+// int[] CreateRandomArray(int min, int max, int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void SumOddPos(int[] array)
+// {
+//     int sumOdd = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if ((i % 2) == 1) sumOdd = sumOdd + array[i];
+//     }
+//     Console.WriteLine($"Sum elements on odd position is {sumOdd}");
+// }
+
+// Console.WriteLine("Enter min of array val:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max of array val:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter size of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] newArray = CreateRandomArray(min, max, size);
+// ShowArray(newArray);
+// Console.WriteLine();
+// SumOddPos(newArray);
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
+
+// double[] CreateRandomArray(double min, double max, int size)
+// {
+//     double[] array = new double[size];
+//     Random rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.NextDouble()*100;
+//     }
+//     return array;
+// }
+
+// void ShowArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.WriteLine(array[i].ToString("F2"));//2 знака после запятой
+//     }
+//     Console.WriteLine();
+// }
+
+// void DifMinMax(double[] array){
+//     double min = array[1];
+//     double max = array[1];
+//     for(int i=0; i<array.Length; i++){
+//         if(array[i]>max) max = array[i];
+//         if(array[i]<min) min = array[i];
+//     }
+//     Console.WriteLine($"Difference between maximum and minimum elements is {(max-min).ToString("F2")}");
+// }
+
+// Console.WriteLine("Enter min of array val:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max of array val:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter size of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// double[] newArray = CreateRandomArray(min, max, size);
+// ShowArray(newArray);
+// Console.WriteLine();
+// DifMinMax(newArray);
+
+
+
+// 6 домашняя работа
+
+//Задача с семинара
+
+// Нужно найти 2 максимальных элемента произвольного массива
 
 int[] CreateRandomArray(int min, int max, int size)
 {
@@ -474,14 +569,23 @@ void ShowArray(int[] array)
     Console.WriteLine();
 }
 
-void SumOddPos(int[] array)
+void TwoMax(int[] array)
 {
-    int sumOdd = 0;
-    for (int i = 0; i < array.Length; i++)
+    int max1 = array[1];
+    int max2 = array[1];
+    for(int i=0; i<array.Length; i++)
     {
-        if ((i % 2) == 1) sumOdd = sumOdd + array[i];
+if(array[i]>max1)
+{
+    max2 = max1;//перезаписываем второй максимум
+    max1 = array[i];//перезаписываем первый максимум
+}
+else if (array[i] > max2 && array[i] != max1)
+{
+    max2 = array[i];
+}
     }
-    Console.WriteLine($"Sum elements on odd position is {sumOdd}");
+    Console.WriteLine($"The two largest numbers in the array is {max1} and {max2}");
 }
 
 Console.WriteLine("Enter min of array val:");
@@ -494,50 +598,79 @@ int size = Convert.ToInt32(Console.ReadLine());
 int[] newArray = CreateRandomArray(min, max, size);
 ShowArray(newArray);
 Console.WriteLine();
-SumOddPos(newArray);
+TwoMax(newArray);
 
 
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-// [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-double[] CreateRandomArray(double min, double max, int size)
+
+//Домашние задачки
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+
+int[] CreateRandomArray(int size)
 {
-    double[] array = new double[size];
-    Random rand = new Random();
-    for (int i = 0; i < array.Length; i++)
+    int[] array = new int[size];
+    Console.WriteLine("Enter elements of array:");
+    for (int i = 0; i < size; i++)
     {
-        array[i] = rand.NextDouble()*100;
+        array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
 }
 
-void ShowArray(double[] array)
+void ShowArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine(array[i].ToString("F2"));//2 знака после запятой
+        Console.Write($"{array[i]} ");
     }
     Console.WriteLine();
 }
 
-void DifMinMax(double[] array){
-    double min = array[1];
-    double max = array[1];
-    for(int i=0; i<array.Length; i++){
-        if(array[i]>max) max = array[i];
-        if(array[i]<min) min = array[i];
-    }
-    Console.WriteLine($"Difference between maximum and minimum elements is {(max-min).ToString("F2")}");
+int count = 0;
+
+void MoreZeroNum(int[] array)
+{
+    for (int i = 0; i < array.Length; i++) { if (array[i] > 0) count++; }
+    Console.WriteLine($"Quantity of numbers greater than zero is {count}");
 }
 
-Console.WriteLine("Enter min of array val:");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter max of array val:");
-int max = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter size of array:");
 int size = Convert.ToInt32(Console.ReadLine());
 
-double[] newArray = CreateRandomArray(min, max, size);
+int[] newArray = CreateRandomArray(size);
 ShowArray(newArray);
 Console.WriteLine();
-DifMinMax(newArray);
+MoreZeroNum(newArray);
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+void LineS(double k1, double b1, double k2, double b2)
+{
+    if (k1 != k2)
+    {
+        double x = (b2 - b1) / (k1 - k2);
+        double y = x * k1 + b1;
+        Console.WriteLine($"Point of intersection of two lines is ({x};{y})");
+    }
+    if (b1 == b2 && k1 == k2) Console.WriteLine("Lines coincide!");
+    else if (k1 == k2 && b1 != b2) Console.WriteLine("Lines are parallel!");
+}
+
+Console.WriteLine("Enter b1, k1 and b2, k2");
+double b1 = Convert.ToDouble(Console.ReadLine());
+double k1 = Convert.ToDouble(Console.ReadLine());
+
+double b2 = Convert.ToDouble(Console.ReadLine());
+double k2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine();
+Console.WriteLine($"Equation of the first line is y={k1}x+{b1}; Equation of the second line is y={k2}x+{b2}");
+Console.WriteLine();
+LineS(k1, b1, k2, b2);
