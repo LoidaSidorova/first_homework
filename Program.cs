@@ -500,33 +500,34 @@ SumOddPos(newArray);
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-int[] CreateRandomArray(int min, int max, int size)
+double[] CreateRandomArray(double min, double max, int size)
 {
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
+    double[] array = new double[size];
+    Random rand = new Random();
+    for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(min, max + 1);
+        array[i] = rand.NextDouble()*100;
     }
     return array;
 }
 
-void ShowArray(int[] array)
+void ShowArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.WriteLine(array[i].ToString("F2"));//2 знака после запятой
     }
     Console.WriteLine();
 }
 
-void DifMinMax(int[] array){
-    int min = array[1];
-    int max = array[1];
+void DifMinMax(double[] array){
+    double min = array[1];
+    double max = array[1];
     for(int i=0; i<array.Length; i++){
         if(array[i]>max) max = array[i];
         if(array[i]<min) min = array[i];
     }
-    Console.WriteLine($"Difference between maximum and minimum elements is {max-min}");
+    Console.WriteLine($"Difference between maximum and minimum elements is {(max-min).ToString("F2")}");
 }
 
 Console.WriteLine("Enter min of array val:");
@@ -536,7 +537,7 @@ int max = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter size of array:");
 int size = Convert.ToInt32(Console.ReadLine());
 
-int[] newArray = CreateRandomArray(min, max, size);
+double[] newArray = CreateRandomArray(min, max, size);
 ShowArray(newArray);
 Console.WriteLine();
 DifMinMax(newArray);
