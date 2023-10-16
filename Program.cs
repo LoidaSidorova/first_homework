@@ -550,127 +550,256 @@
 
 // Нужно найти 2 максимальных элемента произвольного массива
 
-int[] CreateRandomArray(int min, int max, int size)
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(min, max + 1);
+// int[] CreateRandomArray(int min, int max, int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void TwoMax(int[] array)
+// {
+//     int max1 = array[1];
+//     int max2 = array[1];
+//     for(int i=0; i<array.Length; i++)
+//     {
+// if(array[i]>max1)
+// {
+//     max2 = max1;//перезаписываем второй максимум
+//     max1 = array[i];//перезаписываем первый максимум
+// }
+// else if (array[i] > max2 && array[i] != max1)
+// {
+//     max2 = array[i];
+// }
+//     }
+//     Console.WriteLine($"The two largest numbers in the array is {max1} and {max2}");
+// }
+
+// Console.WriteLine("Enter min of array val:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max of array val:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter size of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] newArray = CreateRandomArray(min, max, size);
+// ShowArray(newArray);
+// Console.WriteLine();
+// TwoMax(newArray);
+
+
+
+
+// //Домашние задачки
+
+// // Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// // 0, 7, 8, -2, -2 -> 2
+// // 1, -7, 567, 89, 223-> 3
+
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     Console.WriteLine("Enter elements of array:");
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int count = 0;
+
+// void MoreZeroNum(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++) { if (array[i] > 0) count++; }
+//     Console.WriteLine($"Quantity of numbers greater than zero is {count}");
+// }
+
+// Console.WriteLine("Enter size of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] newArray = CreateRandomArray(size);
+// ShowArray(newArray);
+// Console.WriteLine();
+// MoreZeroNum(newArray);
+
+
+// // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+// // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+// void LineS(double k1, double b1, double k2, double b2)
+// {
+//     if (k1 != k2)
+//     {
+//         double x = (b2 - b1) / (k1 - k2);
+//         double y = x * k1 + b1;
+//         Console.WriteLine($"Point of intersection of two lines is ({x};{y})");
+//     }
+//     if (b1 == b2 && k1 == k2) Console.WriteLine("Lines coincide!");
+//     else if (k1 == k2 && b1 != b2) Console.WriteLine("Lines are parallel!");
+// }
+
+// Console.WriteLine("Enter b1, k1 and b2, k2");
+// double b1 = Convert.ToDouble(Console.ReadLine());
+// double k1 = Convert.ToDouble(Console.ReadLine());
+
+// double b2 = Convert.ToDouble(Console.ReadLine());
+// double k2 = Convert.ToDouble(Console.ReadLine());
+
+// Console.WriteLine();
+// Console.WriteLine($"Equation of the first line is y={k1}x+{b1}; Equation of the second line is y={k2}x+{b2}");
+// Console.WriteLine();
+// LineS(k1, b1, k2, b2);
+
+
+//Домашняя работа №7
+
+// Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+// Внутри класса Answer напишите метод CreateRandomMatrix, который принимал бы числа m и n (размерность массива), а также minLimitRandom и maxLimitRandom, которые указывают на минимальную и максимальную границы случайных чисел.
+
+// Также, задайте метод PrintArray, который выводил бы массив на экран.
+
+// Для вывода матрица используйте интерполяцию строк для форматирования числа matrix[i, j] с двумя знаками после запятой (f2) и добавления символа табуляции (\t) после каждого элемента матрицы. Таким образом, каждый элемент матрицы будет разделен символом табуляции при выводе.
+
+// m = 3, n = 4, minLimitRandom = -10, maxLimitRandom = 10
+
+// 0,5    7    -2    -0,2
+// 1    -3,3    8    -9,9
+// 8    7,8    -7,1    9
+
+
+
+
+
+// Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+// Внутри класса Answer напишите метод CreateRandomMatrix, который принимал бы числа m и n (размерность массива), а также minLimitRandom и maxLimitRandom, которые указывают на минимальную и максимальную границы случайных чисел.
+
+// Также, задайте метод PrintArray, который выводил бы массив на экран.
+
+// Для вывода матрица используйте интерполяцию строк для форматирования числа matrix[i, j] с двумя знаками после запятой (f2) и добавления символа табуляции (\t) после каждого элемента матрицы. Таким образом, каждый элемент матрицы будет разделен символом табуляции при выводе.
+
+// m = 3, n = 4, minLimitRandom = -10, maxLimitRandom = 10
+
+// 0,5    7    -2    -0,2
+// 1    -3,3    8    -9,9
+// 8    7,8    -7,1    9
+
+// Внутри класса Answer напишите методы CreateIncreasingMatrix, PrintArray, PrintListAvr и FindAverageInColumns.
+
+// Метод CreateIncreasingMatrix должен создавать матрицу заданной размерности, с каждым новым элементом увеличивающимся на определенное число. Метод принимает на вход три числа (n - количество строк матрицы, m - количество столбцов матрицы, k - число, на которое увеличивается каждый новый элемент) и возвращает матрицу, удовлетворяющую этим условиям.
+
+// Метод PrintArray должен выводить на экран сгенерированную методом CreateIncreasingMatrix матрицу.
+
+// Метод FindAverageInColumns принимает целочисленную матрицу типа int[,] и возвращает одномерный массив типа double. Этот метод вычисляет среднее значение чисел в каждом столбце матрицы и сохраняет результаты в виде списка.
+
+// Метод PrintListAvr принимает одномерный массив, возвращенный методом FindAverageInColumns и выводит этот список на экран в формате "The averages in columns are: x.x0 x.x0 x.x0 ...", где x.x0 - это значения средних значений столбцов, округленные до двух знаков после запятой (в дробной части ВСЕГДА должно быть 2 числа через точку, см. формат вывода), разделенные знаком табуляции.
+
+// Пример
+
+
+// n = 3;
+// m = 4;
+// k = 2;
+
+// int[,] result = CreateIncreasingMatrix(n, m, k);
+// PrintArray(result);
+// PrintListAvr(FindAverageInColumns(result));
+
+// /*
+// 1   3   5   7   
+// 9   11  13  15  
+// 17  19  21  23  
+// The averages in columns are:
+// 9.00    11.00   13.00   15.00
+// */
+
+
+
+
+
+//Домашняя работа №8
+
+// Напишите программу для работы с матрицей целых чисел.
+
+// Реализуйте класс MatrixOperations, который содержит следующие статические методы:
+
+// PrintMatrix(int[,] matrix): Метод для вывода матрицы на экран. Он принимает на вход двумерный массив целых чисел matrix и выводит его элементы в виде таблицы.
+
+// SortRowsDescending(int[,] matrix): Метод для сортировки строк матрицы по убыванию. Он принимает на вход двумерный массив целых чисел matrix и сортирует каждую 
+//строку матрицы так, чтобы элементы в каждой строке шли по убыванию.
+
+// Аргументы, передаваемые в метод/функцию:
+
+// '9, 1, 7; 1, 2, 3; 4, 5, 6'
+// На выходе:
+
+
+// Исходная матрица:
+// 9   1   7   
+// 1   2   3   
+// 4   5   6   
+
+// Матрица с упорядоченными по убыванию строками:
+// 9   7   1   
+// 3   2   1   
+// 6   5   4
+
+int [,] CreateMatrix(int min, int max, int row, int col){
+    int [,] array = new int [row,col];
+    for(int i = 0; i<row; i++){
+       for(int j=0; j<col; j++){
+        array[i,j] = new Random().Next(min,max+1);
+       } 
     }
     return array;
 }
 
-void ShowArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
+void PrintMatrix(int[,] matrix){
+    for(int i=0; i<Get.Length(0); i++){
+        for(int j=0; j<Get.Length(1); j++){
+            Console.Write($"{matrix[i,j]} \t");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
 
-void TwoMax(int[] array)
-{
-    int max1 = array[1];
-    int max2 = array[1];
-    for(int i=0; i<array.Length; i++)
-    {
-if(array[i]>max1)
-{
-    max2 = max1;//перезаписываем второй максимум
-    max1 = array[i];//перезаписываем первый максимум
-}
-else if (array[i] > max2 && array[i] != max1)
-{
-    max2 = array[i];
-}
-    }
-    Console.WriteLine($"The two largest numbers in the array is {max1} and {max2}");
-}
-
-Console.WriteLine("Enter min of array val:");
+Console.WriteLine("Enter number of rows in array:");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number of col in array:");
+int col = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter min value in array:");
 int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter max of array val:");
+Console.WriteLine("Enter max value in array:");
 int max = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter size of array:");
-int size = Convert.ToInt32(Console.ReadLine());
-
-int[] newArray = CreateRandomArray(min, max, size);
-ShowArray(newArray);
 Console.WriteLine();
-TwoMax(newArray);
-
-
-
-
-//Домашние задачки
-
-// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-// 0, 7, 8, -2, -2 -> 2
-// 1, -7, 567, 89, 223-> 3
-
-
-int[] CreateRandomArray(int size)
-{
-    int[] array = new int[size];
-    Console.WriteLine("Enter elements of array:");
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = Convert.ToInt32(Console.ReadLine());
-    }
-    return array;
-}
-
-void ShowArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
-    Console.WriteLine();
-}
-
-int count = 0;
-
-void MoreZeroNum(int[] array)
-{
-    for (int i = 0; i < array.Length; i++) { if (array[i] > 0) count++; }
-    Console.WriteLine($"Quantity of numbers greater than zero is {count}");
-}
-
-Console.WriteLine("Enter size of array:");
-int size = Convert.ToInt32(Console.ReadLine());
-
-int[] newArray = CreateRandomArray(size);
-ShowArray(newArray);
+int [,] array = CreateMatrix(min,max,row,col);
+PrintMatrix(array);
 Console.WriteLine();
-MoreZeroNum(newArray);
+// ShowSum(array);
 
-
-// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-
-// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
-
-void LineS(double k1, double b1, double k2, double b2)
-{
-    if (k1 != k2)
-    {
-        double x = (b2 - b1) / (k1 - k2);
-        double y = x * k1 + b1;
-        Console.WriteLine($"Point of intersection of two lines is ({x};{y})");
-    }
-    if (b1 == b2 && k1 == k2) Console.WriteLine("Lines coincide!");
-    else if (k1 == k2 && b1 != b2) Console.WriteLine("Lines are parallel!");
-}
-
-Console.WriteLine("Enter b1, k1 and b2, k2");
-double b1 = Convert.ToDouble(Console.ReadLine());
-double k1 = Convert.ToDouble(Console.ReadLine());
-
-double b2 = Convert.ToDouble(Console.ReadLine());
-double k2 = Convert.ToDouble(Console.ReadLine());
-
-Console.WriteLine();
-Console.WriteLine($"Equation of the first line is y={k1}x+{b1}; Equation of the second line is y={k2}x+{b2}");
-Console.WriteLine();
-LineS(k1, b1, k2, b2);
