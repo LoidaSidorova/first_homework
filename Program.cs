@@ -204,7 +204,7 @@
 
 
 
-//3 ДОМАШНЯЯ РАБОТА
+// ДОМАШНЯЯ РАБОТА №3
 
 
 
@@ -327,6 +327,8 @@
 
 
 
+
+
 // Домашняя работа №4
 
 
@@ -410,7 +412,7 @@
 
 
 
-// 5 домашняя работа
+// Домашняя работа №5
 
 // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
@@ -544,7 +546,7 @@
 
 
 
-// 6 домашняя работа
+// Домашняя работа №6
 
 //Задача с семинара
 
@@ -676,15 +678,21 @@
 // LineS(k1, b1, k2, b2);
 
 
+
+
+
+
 //Домашняя работа №7
 
 // Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
-// Внутри класса Answer напишите метод CreateRandomMatrix, который принимал бы числа m и n (размерность массива), а также minLimitRandom и maxLimitRandom, которые указывают на минимальную и максимальную границы случайных чисел.
+// Внутри класса Answer напишите метод CreateRandomMatrix, который принимал бы числа m и n (размерность массива), 
+// а также minLimitRandom и maxLimitRandom, которые указывают на минимальную и максимальную границы случайных чисел.
 
 // Также, задайте метод PrintArray, который выводил бы массив на экран.
 
-// Для вывода матрица используйте интерполяцию строк для форматирования числа matrix[i, j] с двумя знаками после запятой (f2) и добавления символа табуляции (\t) после каждого элемента матрицы. Таким образом, каждый элемент матрицы будет разделен символом табуляции при выводе.
+// Для вывода матрица используйте интерполяцию строк для форматирования числа matrix[i, j] с двумя знаками после запятой (f2) 
+// и добавления символа табуляции (\t) после каждого элемента матрицы. Таким образом, каждый элемент матрицы будет разделен символом табуляции при выводе.
 
 // m = 3, n = 4, minLimitRandom = -10, maxLimitRandom = 10
 
@@ -692,27 +700,46 @@
 // 1    -3,3    8    -9,9
 // 8    7,8    -7,1    9
 
+// double[,] CreateRandomMatrix(int m, int n, int minLimitRandom, int maxLimitRandom)
+// {
+//       double[,] randArr = new double[m,n];
+//       for (int i = 0; i < m; i++){
+//          for (int j = 0; j < n; j++){
+//            randArr[i, j] = Math.Round((new Random().NextDouble()) * (maxLimitRandom + 0.001 - minLimitRandom) + minLimitRandom, 1);
+//          }
+//       }
+//       return randArr;
+// }
+
+// void PrintArray(double[,] matrix) {
+//       for (int i = 0; i < matrix.GetLength(0); i++){
+//          for (int j = 0; j < matrix.GetLength(1); j++){
+//            System.Console.Write(matrix[i, j] + " ");
+//          }
+//         System.Console.WriteLine(); 
+//       }
+//   }
+
+// Console.WriteLine("Enter number of rows in array:");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of col in array:");
+// int col = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min value in array:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max value in array:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// double [,] array = CreateRandomMatrix(min,max,row,col);
+
+// PrintArray(array);
 
 
-
-
-// Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
-// Внутри класса Answer напишите метод CreateRandomMatrix, который принимал бы числа m и n (размерность массива), а также minLimitRandom и maxLimitRandom, которые указывают на минимальную и максимальную границы случайных чисел.
-
-// Также, задайте метод PrintArray, который выводил бы массив на экран.
-
-// Для вывода матрица используйте интерполяцию строк для форматирования числа matrix[i, j] с двумя знаками после запятой (f2) и добавления символа табуляции (\t) после каждого элемента матрицы. Таким образом, каждый элемент матрицы будет разделен символом табуляции при выводе.
-
-// m = 3, n = 4, minLimitRandom = -10, maxLimitRandom = 10
-
-// 0,5    7    -2    -0,2
-// 1    -3,3    8    -9,9
-// 8    7,8    -7,1    9
 
 // Внутри класса Answer напишите методы CreateIncreasingMatrix, PrintArray, PrintListAvr и FindAverageInColumns.
 
-// Метод CreateIncreasingMatrix должен создавать матрицу заданной размерности, с каждым новым элементом увеличивающимся на определенное число. Метод принимает на вход три числа (n - количество строк матрицы, m - количество столбцов матрицы, k - число, на которое увеличивается каждый новый элемент) и возвращает матрицу, удовлетворяющую этим условиям.
+// Метод CreateIncreasingMatrix должен создавать матрицу заданной размерности, с каждым новым элементом увеличивающимся на определенное число. 
+// Метод принимает на вход три числа (n - количество строк матрицы, m - количество столбцов матрицы, k - число, на которое увеличивается каждый новый элемент) 
+// и возвращает матрицу, удовлетворяющую этим условиям.
 
 // Метод PrintArray должен выводить на экран сгенерированную методом CreateIncreasingMatrix матрицу.
 
@@ -739,7 +766,44 @@
 // 9.00    11.00   13.00   15.00
 // */
 
+// void PrintArray (int [,] matrix){
+//       for (int i = 0; i < matrix.GetLength(0); i++){
+//          for (int j = 0; j < matrix.GetLength(1); j++){
+//            Console.Write($"{matrix[i, j]}\t");
+//          }
+//      Console.WriteLine();
+//   }
+// }
 
+// int[,] CreateIncreasingMatrix(int n, int m, int k){
+//   int[,] matrix = new int[n,m];
+//   matrix[0, 0] = 1;
+//   for (int i = 0; i < matrix.GetLength(0); i++){
+//       for (int j = 1; j < matrix.GetLength(1); j++){
+//         matrix[i, j] = matrix[i, j - 1] + k; 
+//       }
+//   if (i + 1 < matrix.GetLength(0))
+//     matrix[i + 1, 0] = matrix[i, matrix.GetLength(1) - 1] + k;
+//   }
+//   return matrix;
+// }
+
+// int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition){  
+//     int[] pos = new int[1];
+//     if (rowPosition - 1 < matrix.GetLength(0) && columnPosition - 1< matrix.GetLength(1)) {
+//        pos[0] = Convert.ToInt32(matrix.GetValue(rowPosition - 1, columnPosition - 1));
+//     } else {
+//       pos[0] = 0;
+//   }
+//   return pos;
+// }
+// void PrintCheckIfError (int[] results, int X, int Y){
+//   if (results[0] != 0){
+//     Console.WriteLine($"The number in [{X}, {Y}] is {results[0]}");
+//   } else {
+//     Console.WriteLine("There is no such index");
+//   }
+// }
 
 
 
@@ -770,36 +834,350 @@
 // 3   2   1   
 // 6   5   4
 
-int [,] CreateMatrix(int min, int max, int row, int col){
-    int [,] array = new int [row,col];
-    for(int i = 0; i<row; i++){
-       for(int j=0; j<col; j++){
-        array[i,j] = new Random().Next(min,max+1);
-       } 
+// int [,] CreateMatrix(int min, int max, int row, int col){
+//     int [,] array = new int [row,col];
+//     for(int i = 0; i<row; i++){
+//        for(int j=0; j<col; j++){
+//         array[i,j] = new Random().Next(min,max+1);
+//        } 
+//     }
+//     return array;
+// }
+
+// void PrintMatrix(int[,] matrix){
+//     for(int i=0; i<matrix.GetLength(0); i++){
+//         for(int j=0; j<matrix.GetLength(1); j++){
+//             Console.Write($"{matrix[i,j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// void  SortRowsDescending(int[,] matrix){
+//     int inter = matrix[0,0];
+//     for(int i=0; i<matrix.GetLength(0); i++){
+//         for(int j=0; j<matrix.GetLength(1); j++){
+//             for(int k=0; k<matrix.GetLength(1); k++){
+//                 if(matrix[i,k]<matrix[i,j]){
+//                     inter = matrix[i,j];
+//                     matrix[i,j]=matrix[i,k];
+//                     matrix[i,k]= inter;
+//                 }
+//             Console.Write($"{matrix[i,j]}\t");
+//         }
+//         Console.WriteLine();
+//         }
+//     }
+// }
+
+// Console.WriteLine("Enter number of rows in array:");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of col in array:");
+// int col = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min value in array:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max value in array:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// int [,] array = CreateMatrix(min,max,row,col);
+// PrintMatrix(array);
+// Console.WriteLine();
+// SortRowsDescending(array);
+// PrintMatrix(array);
+
+
+
+
+// Напишите программу для работы с матрицей целых чисел.
+
+// Реализуйте класс Answer, который содержит следующие статические методы:
+
+// SumOfRow(int[,] matrix, int row): Метод для вычисления суммы элементов в заданной строке row матрицы matrix. Метод принимает двумерный массив целых чисел matrix и номер строки row, 
+// а возвращает целое число - сумму элементов в данной строке.
+
+// MinimumSumRow(int[,] matrix): Метод для определения строки с наименьшей суммой элементов. Метод принимает двумерный массив целых чисел matrix и возвращает массив из двух элементов: 
+// номер строки с наименьшей суммой (нумерация начинается с 0) и саму сумму.
+
+// Аргументы, передаваемые в метод/функцию:
+
+// '9, 1, 7; 1, 2, 3; 4, 5, 6'
+// На выходе:
+
+
+// Исходная матрица:
+// 9   1   7   
+// 1   2   3   
+// 4   5   6   
+
+// Сумма наименьшей строки (строка 2): 6
+
+
+
+// int[,] CreateMatrix(int min, int max, int row, int col)
+// {
+//     int[,] array = new int[row, col];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             array[i, j] = new Random().Next(min, max + 1);
+//         }
+//     }
+//     return array;
+// }
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int SumOfRow(int[,] matrix, int row)
+// {
+//     int sum = 0;
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         sum = sum + matrix[row, j];
+//     }
+//     return sum;
+// }
+
+// int[] MinimumSumRow(int[,] matrix)
+// {
+//     int[] arrayMin = new int[2];
+//     int inter = 0;
+//     arrayMin[1]=SumOfRow(matrix,0);
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         inter = SumOfRow(matrix, i);
+//         if (arrayMin[1] > inter){
+//             arrayMin[0] = i;
+//             arrayMin[1] = inter;
+//         }
+//     }
+// return arrayMin;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Enter number of rows in array:");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of col in array:");
+// int col = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min value in array:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max value in array:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// int[,] array = CreateMatrix(min, max, row, col);
+// PrintMatrix(array);
+// Console.WriteLine();
+// MinimumSumRow(array);
+// int[] arrayMin = MinimumSumRow(array);
+// ShowArray(arrayMin);
+
+
+
+
+
+
+// УмножениЕ двух матриц
+
+// Инструкция по использованию платформы
+
+// Реализуйте класс MatrixOperations, который содержит следующие статические методы:
+
+// MultiplyIfPossible(int[,] matrixA, int[,] matrixB): Метод для проверки, возможно ли умножения двух матриц matrixA и matrixB. 
+// Если число столбцов в матрице matrixA не равно числу строк в матрице matrixB, то выводится сообщение "It is impossible to multiply." 
+// В противном случае, вызывается метод MatrixMultiplication для умножения матриц, и результат выводится с помощью метода PrintMatrix.
+
+// MatrixMultiplication(int[,] matrixA, int[,] matrixB): Метод для умножения двух матриц matrixA и matrixB. Метод возвращает новую матрицу, которая представляет собой результат умножения матрицы matrixA на матрицу matrixB.
+
+// PrintMatrix(int[,] matrix): Метод для вывода матрицы на консоль.
+
+// Если аргументы не переданы, программа использует матрицы по умолчанию. Если аргументы переданы, программа парсит их в двумерные массивы целых чисел и выполняет умножение матриц.
+
+// Аргументы, передаваемые в метод/функцию:
+
+// '1,2;3,4'
+// На выходе:
+
+
+// Исходная матрица:
+// 1   2   
+// 3   4   
+
+// Matrix B:
+// 5   6   
+// 7   8   
+
+// Multiplication result:
+// 19  22  
+// 43  50
+
+// int[,] CreateMatrix(int min, int max, int row, int col)
+// {
+//     int[,] array = new int[row, col];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             array[i, j] = new Random().Next(min, max + 1);
+//         }
+//     }
+//     return array;
+// }
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int[,] MatrixMultiplication(int[,] matrixA, int[,] matrixB){
+//     int[,] matrMult = new int[matrixA.GetLength(0),matrixB.GetLength(1)];
+//     for(int i=0; i<matrixA.GetLength(0); i++){
+//         for(int j=0; j<matrixB.GetLength(1); j++){
+//             for(int k=0; k<matrixB.GetLength(1); k++)
+//             matrMult[i,j]+=matrixA[i,k]*matrixB[k,j];
+//         }
+//     }
+//     return matrMult;
+// }
+
+// void MultiplyIfPossible(int[,] matrixA, int[,] matrixB){ 
+//     if(matrixA.GetLength(0)!=matrixB.GetLength(1)){
+//         Console.WriteLine("It is impossible to multiply.");
+//     }
+//     else{
+//         int[,] matrixRes = MatrixMultiplication(matrixA, matrixB);
+//         PrintMatrix(matrixRes);
+//     }
+// }
+
+
+// Console.WriteLine("Enter number of rows in array A:");
+// int rowA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of col in array A:");
+// int colA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// Console.WriteLine("Enter number of rows in array B:");
+// int rowB = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of col in array B:");
+// int colB = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// Console.WriteLine("Enter min value in array:");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max value in array:");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// int[,] matrixA = CreateMatrix(min, max, rowA, colA);
+// PrintMatrix(matrixA);
+// Console.WriteLine();
+// int[,] matrixB = CreateMatrix(min, max, rowB, colB);
+// PrintMatrix(matrixB);
+// Console.WriteLine();
+// MultiplyIfPossible(matrixA, matrixB);
+
+
+
+//Домашняя работа №9
+
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+void CountDown(int n){
+    if(n>1){
+        Console.Write($"{n}, ");
+        CountDown(n-1);
     }
-    return array;
+    if(n<1){
+        Console.Write($"{n}, ");
+        CountDown(n+1);
+    }
+    if(n==1){
+        Console.Write(1);
+    }
 }
 
-void PrintMatrix(int[,] matrix){
-    for(int i=0; i<Get.Length(0); i++){
-        for(int j=0; j<Get.Length(1); j++){
-            Console.Write($"{matrix[i,j]} \t");
-        }
-        Console.WriteLine();
+Console.WriteLine("Enter the number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+CountDown(num);
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+void InterAmount(int m, int n, int s){
+    if(m>n){
+        s+=m;
+        InterAmount(m-1, n, s);
+    }
+    if(n>m){
+        s+=n;
+        InterAmount(m, n-1, s);
+    }
+    if(m==n){
+        s+=m;
+        Console.WriteLine(s);
     }
 }
 
-Console.WriteLine("Enter number of rows in array:");
-int row = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter number of col in array:");
-int col = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter min value in array:");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter max value in array:");
-int max = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-int [,] array = CreateMatrix(min,max,row,col);
-PrintMatrix(array);
-Console.WriteLine();
-// ShowSum(array);
+int sum = 0;
+
+Console.WriteLine("Enter numberous m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter numberous n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+InterAmount(m,n,sum);
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+int Akkerman(int m, int n)
+{
+    if (m == 0)
+    {
+        return n + 1;
+    }
+    else if (m > 0 && n == 0)
+    {
+        return Akkerman(m - 1, 1);
+    }
+    else
+    {
+        return Akkerman(m - 1, Akkerman(m, n - 1));
+    }
+}
+
+Console.WriteLine("Enter numberous m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter numberous n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int akr=Akkerman(m, n);
+Console.WriteLine(akr);
 
